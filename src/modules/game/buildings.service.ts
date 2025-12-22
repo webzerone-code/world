@@ -1,0 +1,12 @@
+import { Injectable } from '@nestjs/common';
+import { BuildingRepository } from '../../infrastructure/repositories/building.repository';
+import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
+
+@Injectable()
+export class BuildingsService {
+  constructor(private buildingRepository: BuildingRepository) {}
+
+  async allBuildings(): Promise<BuildingEntity[] | null> {
+    return await this.buildingRepository.loadAll();
+  }
+}

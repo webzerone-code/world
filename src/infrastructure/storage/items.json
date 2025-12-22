@@ -1,0 +1,104 @@
+[
+  {
+    "id": "Gold",
+    "name": "Gold",
+    "description": "Item Which Allow to buy others Items",
+    "itemType": "Currency",
+    "previewImage": "Gold_Icon.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Wood-Log",
+    "name": "Wood Log",
+    "description": "Item Which Can Get Wood Item From",
+    "itemType": "RawResources",
+    "previewImage": "Wood_Log.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Wood",
+    "name": "Wood",
+    "description": "Item Which Can Build Using it",
+    "itemType": "Resource",
+    "previewImage": "Wood.png",
+    "connectionId": null,
+    "itemPrice": {
+      "itemId": "Gold",
+      "itemAmount": 1
+    }
+  },
+  {
+    "id": "Clay",
+    "name": "Clay",
+    "description": "Item Which Can Used to product bricks",
+    "itemType": "RawResources",
+    "previewImage": "Clay.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Brick",
+    "name": "Brick",
+    "description": "Item Which Can Build Using it",
+    "itemType": "Resource",
+    "previewImage": "Clay.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Iron-Ore",
+    "name": "Iron Ore",
+    "description": "Item Which Can Used to product Iron",
+    "itemType": "RawResources",
+    "previewImage": "Iron-Ore.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Iron",
+    "name": "Iron",
+    "description": "Item Which Can Build Using it",
+    "itemType": "Resource",
+    "previewImage": "Iron.png",
+    "connectionId": null,
+    "itemPrice": {
+      "itemId": "Gold",
+      "itemAmount": 1
+    }
+  },
+  {
+    "id": "Rocks",
+    "name": "Rocks",
+    "description": "Item Which Can Build Using it",
+    "itemType": "RawResources",
+    "previewImage": "Iron.png",
+    "connectionId": null,
+    "itemPrice": null
+  },
+  {
+    "id": "Stone",
+    "name": "Stone",
+    "description": "Item Which Can Build Using it",
+    "itemType": "Resource",
+    "previewImage": "Iron.png",
+    "connectionId": null,
+    "itemPrice": {
+      "itemId": "Gold",
+      "itemAmount": 1
+    }
+  },
+  {
+    "id": "Wood-Cutter-item",
+    "name": "Wood Cutter Building",
+    "description": "Item which convert Wood Log into Wood",
+    "itemType": "Building",
+    "previewImage": "Wood-Cutter.png",
+    "connectionId": "Wood-Cutter-Building",
+    "itemPrice": {
+      "itemId": "Gold",
+      "itemAmount": 10
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Wood-Cutter-Building",
+    "name": "Wood Cutter",
+    "description": "Item which convert Wood Log into Wood",
+    "buildingItem": "Wood-Cutter-item",
+    "level": 1,
+    "consumedItem": "Wood-Log",
+    "consumedItemAmount": 1,
+    "producedItem": "Wood",
+    "producedItemAmount": 10,
+    "operationTime": 100
+  }
+]

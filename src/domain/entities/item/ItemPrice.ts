@@ -6,4 +6,10 @@ export class ItemPrice {
     this.itemAmount = itemAmount;
     this.itemId = itemId;
   }
+  public getPriceAmount(): number {
+    return this.itemAmount;
+  }
+  public getItemId(): string {
+    return this.itemId;
+  }
 }

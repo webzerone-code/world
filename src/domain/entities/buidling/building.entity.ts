@@ -1,4 +1,5 @@
 import { BuildingState } from './building.state';
+import { ItemEntity } from '../item/item.entity';
 
 export class BuildingEntity {
   private id: string;
@@ -46,5 +47,8 @@ export class BuildingEntity {
   }
   getId(): string {
     return this.id;
+  }
+  getItemId(): string {
+    return this.buildingItem;
   }
 }

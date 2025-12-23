@@ -39,4 +39,9 @@ export class UserItemRepository implements UserItemRepositoryInterface {
   public findALlUserItems(): Promise<UserItemEntity[] | null> {
     return Promise.resolve(this.userItems);
   }
+  public findByItem(id: string): UserItemEntity | null {
+    const lookUpItem =
+      this.userItems.find((i) => i.getItem().getId() === id) ?? null;
+    return lookUpItem;
+  }
 }

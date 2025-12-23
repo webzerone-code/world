@@ -5,9 +5,11 @@ import { ItemRepository } from '../../infrastructure/repositories/item.repositor
 import { UserBuildingRepository } from '../../infrastructure/repositories/user.building.repository';
 import { BuildingRepository } from '../../infrastructure/repositories/building.repository';
 import { UserItemsService } from './user.items.service';
-import { UserBuildingsService } from './user.buildings.service';
 import { UserBuildingsController } from './user.buildings.controller';
 import { UserItemsController } from './user.items.controller';
+import { BuildingPurchaseService } from '../../domain/services/building-purchase.service';
+import { UserBuildingsService } from './user.buildings.service';
+import { BuyBuildingUseCase } from '../../application/buy.building.usecase';
 
 @Module({
   imports: [GameModule],
@@ -25,8 +27,10 @@ import { UserItemsController } from './user.items.controller';
         new UserBuildingRepository('userBuildings.json', buildingRepository), // pass your JSON file here
       inject: [BuildingRepository],
     },
+    BuildingPurchaseService,
     UserItemsService,
     UserBuildingsService,
+    BuyBuildingUseCase,
   ],
 })
 export class GameUserModule {}

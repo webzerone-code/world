@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { BuildingsService } from './buildings.service';
 import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
 
@@ -9,5 +9,10 @@ export class BuildingsController {
   @Get()
   async allBuildings(): Promise<BuildingEntity[] | null> {
     return await this.buildingsService.allBuildings();
+  }
+
+  @Get(':id')
+  getById(@Param('id') id: string): BuildingEntity | null {
+    return this.buildingsService.findById(id);
   }
 }

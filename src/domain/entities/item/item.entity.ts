@@ -34,4 +34,7 @@ export class ItemEntity {
   getType(): ItemType {
     return this.itemType;
   }
+  getPrice(): ItemPrice | null | undefined {
+    return this.itemPrice;
+  }
 }

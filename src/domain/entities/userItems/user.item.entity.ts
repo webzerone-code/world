@@ -15,4 +15,10 @@ export class UserItemEntity {
   getItem(): ItemEntity {
     return this.item;
   }
+  getItemCount(): number {
+    return this.itemCount;
+  }
+  decrementItemCount(itemCount: number): void {
+    this.itemCount -= itemCount;
+  }
 }

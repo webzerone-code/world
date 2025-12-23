@@ -41,6 +41,11 @@ export class ItemRepository implements ItemRepositoryInterface {
       this.itemsEntities.find((i) => i.getId() === id) ?? null;
     return Promise.resolve(lookUpItem);
   }
+  findByItemId(id: string): ItemEntity | null {
+    const lookUpItem: ItemEntity | null =
+      this.itemsEntities.find((i) => i.getId() === id) ?? null;
+    return lookUpItem;
+  }
   findItem(id: string): ItemEntity | null {
     const lookUpItem: ItemEntity | null =
       this.itemsEntities.find((i) => i.getId() === id) ?? null;

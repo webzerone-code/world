@@ -9,4 +9,7 @@ export class BuildingsService {
   async allBuildings(): Promise<BuildingEntity[] | null> {
     return await this.buildingRepository.loadAll();
   }
+  findById(id: string): BuildingEntity | null {
+    return this.buildingRepository.findById(id);
+  }
 }

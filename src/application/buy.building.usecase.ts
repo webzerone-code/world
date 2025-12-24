@@ -47,6 +47,7 @@ export class BuyBuildingUseCase {
       building,
       userItem,
       item,
+      this.userBuildingRepository.getUserBuildingsCount(),
     );
     //this.userItemRepository.save(userItem); // gold/items deducted
     this.userBuildingRepository.addBuilding(userBuilding);

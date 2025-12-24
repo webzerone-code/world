@@ -36,4 +36,7 @@ export class UserBuildingRepository implements UserBuildingRepositoryInterface {
   public findAll(): Promise<UserBuildingEntity[] | null> {
     return Promise.resolve(this.userBuildings);
   }
+  public getUserBuildingsCount(): number {
+    return this.userBuildings.length;
+  }
 }

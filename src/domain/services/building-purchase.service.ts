@@ -11,12 +11,21 @@ export class BuildingPurchaseService {
     building: BuildingEntity,
     userItem: UserItemEntity,
     item: ItemPrice,
+    length: number,
   ): UserBuildingEntity {
     // if (!building.isAvailable()) {
     //   throw new Error('Building is not available');
     // }
     // const buildingPrice = ;
     userItem.decrementItemCount(item.getPriceAmount());
-    return new UserBuildingEntity('user-building-id', userId, building, 0, 0);
+    if (length <= 0) length = 1;
+    else length += 1;
+    return new UserBuildingEntity(
+      'user-building-id-' + length.toString(),
+      userId,
+      building,
+      0,
+      0,
+    );
   }
 }

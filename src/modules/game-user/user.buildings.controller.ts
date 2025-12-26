@@ -5,8 +5,8 @@ import {
   Body,
   Post,
 } from '@nestjs/common';
-import { UserBuildingsService } from './user.buildings.service';
 import { UserBuildingEntity } from '../../domain/entities/userBuildings/user.building.entity';
+import { UserBuildingsService } from '../../application/services/user.buildings.service';
 
 @Controller('game/user/buildings')
 export class UserBuildingsController {

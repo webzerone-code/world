@@ -3,7 +3,7 @@ import { UserBuildingEntity } from '../../domain/entities/userBuildings/user.bui
 import * as path from 'path'; // or import path from 'path';
 import * as fs from 'fs';
 import { BuildingRepository } from './building.repository';
-import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
+import { BuildingEntity } from '../../domain/entities/building/building.entity';
 
 export class UserBuildingRepository implements UserBuildingRepositoryInterface {
   private userBuildings: UserBuildingEntity[] = []; // this need change to be loaded by id dictionary

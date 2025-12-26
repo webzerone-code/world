@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { BuildingsService } from './buildings.service';
-import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
+import { BuildingEntity } from '../../domain/entities/building/building.entity';
+import { BuildingsService } from '../../application/services/buildings.service';
 
 @Controller('game/buildings')
 export class BuildingsController {

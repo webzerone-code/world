@@ -1,4 +1,4 @@
-import { BuildingEntity } from '../entities/buidling/building.entity';
+import { BuildingEntity } from '../entities/building/building.entity';
 import { UserBuildingEntity } from '../entities/userBuildings/user.building.entity';
 import { Injectable } from '@nestjs/common';
 import { UserItemEntity } from '../entities/userItems/user.item.entity';

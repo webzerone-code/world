@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { BuildingRepository } from '../../infrastructure/repositories/building.repository';
-import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
+import { BuildingEntity } from '../../domain/entities/building/building.entity';
 
 @Injectable()
 export class BuildingsService {

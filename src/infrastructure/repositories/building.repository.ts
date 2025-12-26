@@ -1,5 +1,5 @@
 import { BuildingRepositoryInterface } from '../../domain/repositories/building.repository.interface';
-import { BuildingEntity } from '../../domain/entities/buidling/building.entity';
+import { BuildingEntity } from '../../domain/entities/building/building.entity';
 import * as path from 'path'; // or import path from 'path';
 import * as fs from 'fs';
 import { ItemRepository } from './item.repository';

@@ -1,5 +1,5 @@
-import { BuildingEntity } from '../buidling/building.entity';
-import { BuildingState } from '../buidling/building.state';
+import { BuildingEntity } from '../building/building.entity';
+import { BuildingState } from '../building/building.state';
 
 export class UserBuildingEntity {
   private id: string;

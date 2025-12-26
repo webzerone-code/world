@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { UserBuildingRepository } from '../../infrastructure/repositories/user.building.repository';
 import { UserBuildingEntity } from '../../domain/entities/userBuildings/user.building.entity';
-import { BuyBuildingUseCase } from '../../application/buy.building.usecase';
+import { BuyBuildingUseCase } from '../usecases/buy.building.usecase';
 
 @Injectable()
 export class UserBuildingsService {

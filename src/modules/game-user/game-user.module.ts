@@ -4,12 +4,12 @@ import { UserItemRepository } from '../../infrastructure/repositories/user.item.
 import { ItemRepository } from '../../infrastructure/repositories/item.repository';
 import { UserBuildingRepository } from '../../infrastructure/repositories/user.building.repository';
 import { BuildingRepository } from '../../infrastructure/repositories/building.repository';
-import { UserItemsService } from './user.items.service';
 import { UserBuildingsController } from './user.buildings.controller';
 import { UserItemsController } from './user.items.controller';
 import { BuildingPurchaseService } from '../../domain/services/building-purchase.service';
-import { UserBuildingsService } from './user.buildings.service';
-import { BuyBuildingUseCase } from '../../application/buy.building.usecase';
+import { BuyBuildingUseCase } from '../../application/usecases/buy.building.usecase';
+import { UserItemsService } from '../../application/services/user.items.service';
+import { UserBuildingsService } from '../../application/services/user.buildings.service';
 
 @Module({
   imports: [GameModule],

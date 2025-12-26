@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ItemRepository } from '../../infrastructure/repositories/item.repository';
 import { BuildingRepository } from '../../infrastructure/repositories/building.repository';
-import { ItemsService } from './items.service';
-import { BuildingsService } from './buildings.service';
 import { ItemsController } from './items.controller';
 import { BuildingsController } from './buildings.controller';
+import { ItemsService } from '../../application/services/items.service';
+import { BuildingsService } from '../../application/services/buildings.service';
 
 @Module({
   imports: [],

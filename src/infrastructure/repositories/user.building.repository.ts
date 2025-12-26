@@ -1,4 +1,4 @@
-import { UserBuildingRepositoryInterface } from '../../domain/repositories/user.building.repository.interface';
+import { UserBuildingRepositoryInterface } from '../../domain/repositories-interfaces/user.building.repository.interface';
 import { UserBuildingEntity } from '../../domain/entities/userBuildings/user.building.entity';
 import * as path from 'path'; // or import path from 'path';
 import * as fs from 'fs';

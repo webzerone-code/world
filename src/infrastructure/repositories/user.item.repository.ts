@@ -1,4 +1,4 @@
-import { UserItemRepositoryInterface } from '../../domain/repositories/user.item.repository.interface';
+import { UserItemRepositoryInterface } from '../../domain/repositories-interfaces/user.item.repository.interface';
 import { ItemEntity } from '../../domain/entities/item/item.entity';
 import { ItemType } from '../../domain/entities/item/item.type';
 import * as path from 'path'; // or import path from 'path';

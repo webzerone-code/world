@@ -23,7 +23,7 @@ export class BuyBuildingUseCase {
     const building: BuildingEntity | null =
       this.buildingRepository.findById(buildingId);
     if (building === null) throw new BuildingNotFoundError(buildingId);
-    //The use case asks the Domain to perform the “buy building” business rule,
+    //The use case asks the Domain to perform the “buying of the building” business rule,
     // and the Domain returns the resulting ownership entity if the action is valid.
 
     // Get Item Price

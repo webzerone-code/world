@@ -29,7 +29,7 @@ export class BuildingEntity {
     consumedItemAmount: number,
     producedItem: string,
     producedItemAmount: number,
-    operationTime: number,
+    operationTime: number, // in seconds
   ) {
     this.id = id;
     this.name = name;
@@ -50,5 +50,18 @@ export class BuildingEntity {
   }
   getItemId(): string {
     return this.buildingItem;
+  }
+  public getConsumedItem(): string {
+    return this.consumedItem;
+  }
+  public getConsumedItemAmount(): number {
+    return this.consumedItemAmount;
+  }
+
+  public getProducedItem(): string {
+    return this.producedItem;
+  }
+  public getProducedItemAmount(): number {
+    return this.producedItemAmount;
   }
 }

@@ -1,6 +1,5 @@
 import { UserItemRepositoryInterface } from '../../domain/repositories-interfaces/user.item.repository.interface';
 import { ItemEntity } from '../../domain/entities/item/item.entity';
-import { ItemType } from '../../domain/entities/item/item.type';
 import * as path from 'path'; // or import path from 'path';
 import * as fs from 'fs';
 import { ItemPrice } from '../../domain/entities/item/ItemPrice';
@@ -28,7 +27,21 @@ export class UserItemRepository implements UserItemRepositoryInterface {
       return new UserItemEntity(i.id, i.userId, item, i.itemCount);
     });
   }
-
+  async addItem(item: UserItemEntity): Promise<void> {
+    this.userItems.push(item);
+  }
+  async updateItemIncrement(id: string, amount: number): Promise<void> {
+    const index = this.userItems.findIndex((i) => i.getId() === id);
+    if (index !== -1) {
+      this.userItems[index].incrementItemCount(amount);
+    }
+  }
+  async updateItemDecrement(id: string, amount: number): Promise<void> {
+    const index = this.userItems.findIndex((i) => i.getId() === id);
+    if (index !== -1) {
+      this.userItems[index].decrementItemCount(amount);
+    }
+  }
   findAll(): Promise<ItemEntity[] | null> {
     const items: ItemEntity[] | null = this.userItems.map((i: UserItemEntity) =>
       i.getItem(),
@@ -43,5 +56,8 @@ export class UserItemRepository implements UserItemRepositoryInterface {
     const lookUpItem =
       this.userItems.find((i) => i.getItem().getId() === id) ?? null;
     return lookUpItem;
+  }
+  public getUserItemLength(): number {
+    return this.userItems.length;
   }
 }

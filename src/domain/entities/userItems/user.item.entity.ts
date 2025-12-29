@@ -11,7 +11,9 @@ export class UserItemEntity {
     this.item = item;
     this.itemCount = itemCount;
   }
-
+  getId(): string {
+    return this.id;
+  }
   getItem(): ItemEntity {
     return this.item;
   }
@@ -20,5 +22,8 @@ export class UserItemEntity {
   }
   decrementItemCount(itemCount: number): void {
     this.itemCount -= itemCount;
+  }
+  incrementItemCount(itemCount: number): void {
+    this.itemCount += itemCount;
   }
 }

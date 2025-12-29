@@ -39,4 +39,13 @@ export class UserBuildingRepository implements UserBuildingRepositoryInterface {
   public getUserBuildingsCount(): number {
     return this.userBuildings.length;
   }
+
+  // Async , u dont need await here but u need async cos the caller expect to wait tell the operation is done
+  public async findById(
+    buildingId: string,
+  ): Promise<UserBuildingEntity | null> {
+    const building: UserBuildingEntity | null =
+      this.userBuildings.find((i) => i.getId() === buildingId) ?? null;
+    return Promise.resolve(building);
+  }
 }

@@ -10,6 +10,7 @@ import { BuildingPurchaseService } from '../../domain/services/building-purchase
 import { BuyBuildingUseCase } from '../../application/usecases/buy.building.usecase';
 import { UserItemsService } from '../../application/services/user.items.service';
 import { UserBuildingsService } from '../../application/services/user.buildings.service';
+import { OperateBuildingUseCase } from '../../application/usecases/operate.building.usecase';
 
 @Module({
   imports: [GameModule],
@@ -31,6 +32,7 @@ import { UserBuildingsService } from '../../application/services/user.buildings.
     UserItemsService,
     UserBuildingsService,
     BuyBuildingUseCase,
+    OperateBuildingUseCase,
   ],
 })
 export class GameUserModule {}

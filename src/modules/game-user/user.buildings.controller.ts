@@ -4,9 +4,11 @@ import {
   Get,
   Body,
   Post,
+  Param,
 } from '@nestjs/common';
 import { UserBuildingEntity } from '../../domain/entities/userBuildings/user.building.entity';
 import { UserBuildingsService } from '../../application/services/user.buildings.service';
+import { BuildingOperationDto } from '../../infrastructure/persistence/responses/buildings/building.operation.dto';
 
 @Controller('game/user/buildings')
 export class UserBuildingsController {
@@ -31,5 +33,12 @@ export class UserBuildingsController {
       // optionally map domain errors to HTTP codes
       throw new BadRequestException(error.message);
     }
+  }
+
+  @Post(':buildingId/operate')
+  async operateBuilding(
+    @Param('buildingId') buildingId: string,
+  ): Promise<BuildingOperationDto> {
+    return await this.userBuildingsService.operateBuilding(buildingId);
   }
 }

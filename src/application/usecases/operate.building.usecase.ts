@@ -8,6 +8,7 @@ import { BuildingEntity } from '../../domain/entities/building/building.entity';
 import { ItemEntity } from '../../domain/entities/item/item.entity';
 import { ItemRepository } from '../../infrastructure/repositories/item.repository';
 import { UserItemEntity } from '../../domain/entities/userItems/user.item.entity';
+import { BuildingState } from '../../domain/entities/building/building.state';
 
 @Injectable()
 export class OperateBuildingUseCase {
@@ -31,7 +32,9 @@ export class OperateBuildingUseCase {
       buildingEntity.getProducedItem(),
     );
     if (producedItem === null) throw new Error('Item not found');
-
+    if (building.getRemainingTime() === 0 && building.isWorking()) {
+      building.changeState(BuildingState.Finished);
+    }
     if (building.isFinished()) {
       const userItem: UserItemEntity | null =
         this.userItemRepository.findByItem(producedItem.getId());
@@ -52,6 +55,7 @@ export class OperateBuildingUseCase {
           ),
         );
       }
+      building.changeState(BuildingState.Idle);
     }
     if (building.isIdle()) {
       const userItem: UserItemEntity | null =

@@ -4,5 +4,11 @@
     "userId": "1",
     "itemId":"Gold",
     "itemCount": 1000
+  },
+  {
+    "id": "UserWoodLog",
+    "userId": "1",
+    "itemId":"Wood-Log",
+    "itemCount": 1000
   }
 ]
